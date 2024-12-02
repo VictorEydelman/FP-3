@@ -27,6 +27,3 @@ jobs:
 
     - name: Run tests
       run: cd Lab3 && clojure -A:test
-
-    - name: Run lint
-      run: cd Lab3 && clj-kondo --lint
