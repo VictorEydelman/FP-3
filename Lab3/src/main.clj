@@ -1,6 +1,8 @@
 (ns main
   (:require [clojure.string :as str]))
+
 (defrecord Point [x y])
+
 (defn input []
       (println "Введите x и y")
   (let [line (read-line)]
