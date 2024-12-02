@@ -12,8 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Install dependencies
-      run: lein deps
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Clojure
+      uses: DeLaGuardo/setup-clojure@master
+      with:
+        cli: 1.10.3.1040
+
+    - name: Install clj-kondo
+      run: npm install -g clj-kondo
+
+    - name: Format code
+      run: cd Lab3 && clojure -A:format
+
     - name: Run tests
-      run: lein test
+      run: cd Lab3 && clojure -A:test
