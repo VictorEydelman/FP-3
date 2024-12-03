@@ -92,3 +92,7 @@
     (println (clojure.string/join "\t" y))))
 ```
 Функция для вывода результатов интерполяции
+
+## Пример запуска:
+Для всех алгоритмов, с шагом 1, для функции sin(x)
+![image](https://github.com/user-attachments/assets/ec34c249-2596-4293-ab7c-0aaca0e34f20)
